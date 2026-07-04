@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAD ANIMALS — Stay Wild.</title>
+  <meta name="description" content="MAD ANIMALS — かわいいのに、なんかクセになる。ちょっとヤバい動物たちのストリートウェアブランド。">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta property="og:title" content="MAD ANIMALS — Stay Wild.">
+  <meta property="og:description" content="かわいいのに、なんかクセになる。ちょっとヤバい動物たちの服。">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://baseec-img-mng.akamaized.net/images/shop_front/madanimals-base-shop/1db834d5b6d621f2bc02105ed6d60248.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:ital,wght@0,700;0,900;1,700;1,900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <div class="loader-logo">MAD ANIMALS</div>
+      <div class="loader-bar"><span></span></div>
+      <div class="loader-pct">0%</div>
+    </div>
+  </div>
+
+  <div class="noise" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="#" class="logo">
+        <img src="https://baseec-img-mng.akamaized.net/images/shop_front/madanimals-base-shop/1db834d5b6d621f2bc02105ed6d60248.jpeg"
+             alt="MAD ANIMALS" class="logo-img"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <span class="logo-fallback">MAD<br>ANIMALS</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#collection">COLLECTION</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li>
+          <a href="https://www.instagram.com/madanimals0000/" target="_blank" class="nav-ig" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+        </li>
+        <li><a href="https://madanimals.base.shop" target="_blank" class="nav-cta">SHOP</a></li>
+      </ul>
+      <button class="hamburger" onclick="toggleNav()" aria-label="menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="#collection" onclick="toggleNav()">COLLECTION</a>
+      <a href="#about"      onclick="toggleNav()">ABOUT</a>
+      <a href="https://www.instagram.com/madanimals0000/" target="_blank">INSTAGRAM</a>
+      <a href="https://madanimals.base.shop" target="_blank" class="nm-shop">SHOP →</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero">
+    <div class="hero-imgbg">
+      <img src="https://baseec-img-mng.akamaized.net/images/item/origin/5840f2caa893820e67bb0910462cd7e9.png?imformat=generic&q=90&im=Resize,width=1280,type=normal"
+           alt="" aria-hidden="true" class="hero-bgimg">
+      <div class="hero-overlay"></div>
+    </div>
+    <canvas class="fx-net" aria-hidden="true"></canvas>
+    <div class="hero-glyphs" aria-hidden="true"></div>
+    <div class="hero-body">
+      <div class="hero-left">
+        <div class="hero-tag">STREETWEAR BRAND — JAPAN</div>
+        <h1 class="hero-title">
+          <span class="ht-stay">STAY</span>
+          <span class="ht-wild">WILD<span class="ht-dot">.</span></span>
+        </h1>
+        <p class="hero-sub">かわいいのに、なんかクセになる。<br>ちょっとヤバい動物たちの服。</p>
+        <div class="hero-btns">
+          <a href="#collection" class="btn btn-yellow">COLLECTION</a>
+          <a href="https://www.instagram.com/madanimals0000/" target="_blank" class="btn btn-outline">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            FOLLOW
+          </a>
+        </div>
+      </div>
+      <div class="hero-badges">
+        <div class="hb hb-1">
+          <img src="https://baseec-img-mng.akamaized.net/images/item/origin/d1810a6d03071981f4bf5d53f9cd0045.png?imformat=generic&q=90&im=Resize,width=400,type=normal" alt="HOODIE">
+          <span>HOODIE</span>
+        </div>
+        <div class="hb hb-2">
+          <img src="https://baseec-img-mng.akamaized.net/images/item/origin/49cf90d17403f8706e813f16e15fe00b.png?imformat=generic&q=90&im=Resize,width=400,type=normal" alt="SHEEP">
+          <span>SHEEP</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-marquee">
+      <div class="marquee-track">
+        <span>MAD ANIMALS</span><span>✦</span><span>STAY WILD</span><span>✦</span>
+        <span>STREETWEAR</span><span>✦</span><span>JAPAN</span><span>✦</span>
+        <span>CHIMPANZEE</span><span>✦</span><span>CROCODILE</span><span>✦</span>
+        <span>GIRAFFE</span><span>✦</span><span>WILD BOAR</span><span>✦</span>
+        <span>MAD ANIMALS</span><span>✦</span><span>STAY WILD</span><span>✦</span>
+        <span>STREETWEAR</span><span>✦</span><span>JAPAN</span><span>✦</span>
+        <span>CHIMPANZEE</span><span>✦</span><span>CROCODILE</span><span>✦</span>
+        <span>GIRAFFE</span><span>✦</span><span>WILD BOAR</span><span>✦</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== ZOOM FOCUS ===== -->
+  <section class="zoom-section" id="focus" aria-label="zoom focus">
+    <div class="zoom-sticky">
+      <div class="zoom-word" aria-hidden="true"><span>FOCUS</span><span class="zw-2">WILD</span></div>
+      <div class="zoom-img-wrap">
+        <img src="https://baseec-img-mng.akamaized.net/images/item/origin/5840f2caa893820e67bb0910462cd7e9.png?imformat=generic&q=90&im=Resize,width=1000,type=normal"
+             alt="CHIMPANZEE SWEAT" loading="lazy" draggable="false">
+      </div>
+      <div class="zoom-caption">
+        <span class="zc-tag">ZOOM FOCUS</span>
+        <p class="zc-copy">ゆるさの奥に、狂気。<br>近づくほど、クセになる。</p>
+        <a href="https://madanimals.base.shop/items/130235592" target="_blank" class="btn btn-yellow">CHIMPANZEE →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 3D SHOWCASE ===== -->
+  <section class="stage-section" id="showcase">
+    <div class="container">
+      <div class="section-head">
+        <div class="sh-line"></div>
+        <h2 class="sh-title">3D SHOWCASE</h2>
+        <span class="sh-link stage-hint">← DRAG TO SPIN →</span>
+      </div>
+      <p class="section-sub">回して選ぶ、8体のMAD ANIMALS。気になったらクリックでショップへ</p>
+    </div>
+    <div class="stage" id="stage3d">
+      <div class="stage-ring" id="stageRing">
+        <a class="stage-panel" href="https://madanimals.base.shop/items/138087284" target="_blank" draggable="false">
+          <img src="https://baseec-img-mng.akamaized.net/images/item/origin/08d19a73f643b1a5e88e8b3e58671a9d.png?imformat=generic&q=90&im=Resize,width=400,type=normal" alt="HEART" loading="lazy" draggable="false">
+          <span>HEART</span>
+        </a>
+        <a class="stage-panel" href="https://madanimals.base.shop/items/138083269" target="_blank" draggable="false">
+          <img src="https://baseec-img-mng.akamaized.net/images/item/origin/d1810a6d03071981f4bf5d53f9cd0045.png?imformat=generic&q=90&im=Resize,width=400,type=normal" alt="MAD ANIMALS" loading="lazy" draggable="false">
+          <span>MAD ANIMALS</span>
+        </a>
+        <a class="stage-panel" href="https://madanimals.base.shop/items/134100335" target="_blank" draggable="false">
+          <img src="https://baseec-img-mng.akamaized.net/images/item/origin/49cf90d17403f8706e813f16e15fe00b.png?imformat=generic&q=90&im=Resize,width=400,type=normal" alt="SHEEP" loading="lazy" draggable="false">
+          <span>SHEEP</span>
+        </a>
+        <a class="stage-panel" href="https://madanimals.base.shop/items/127775143" target="_blank" draggable="false">
+          <img src="https://baseec-img-mng.akamaized.net/images/item/origin/0c13a5c3892bf54dc705e11a5260eb79.png?imformat=generic&q=90&im=Resize,width=400,type=normal" alt="GIRAFFE" loading="lazy" draggable="false">
+          <span>GIRAFFE</span>
+        </a>
+        <a class="stage-panel" href="https://madanimals.base.shop/items/130235592" target="_blank" draggable="false">
+          <img src="https://baseec-img-mng.akamaized.net/images/item/origin/5840f2caa893820e67bb0910462cd7e9.png?imformat=generic&q=90&im=Resize,width=400,type=normal" alt="CHIMPANZEE" loading="lazy" draggable="false">
+          <span>CHIMPANZEE</span>
+        </a>
+        <a class="stage-panel" href="https://madanimals.base.shop/items/129555319" target="_blank" draggable="false">
+          <img src="https://baseec-img-mng.akamaized.net/images/item/origin/201266d177b9f6dcc3cb1e8dff60df26.png?imformat=generic&q=90&im=Resize,width=400,type=normal" alt="CROCODILE" loading="lazy" draggable="false">
+          <span>CROCODILE</span>
+        </a>
+        <a class="stage-panel" href="https://madanimals.base.shop/items/129555925" target="_blank" draggable="false">
+          <img src="https://baseec-img-mng.akamaized.net/images/item/origin/42b7a4c4900433304bbd87305bb2579b.png?imformat=generic&q=90&im=Resize,width=400,type=normal" alt="DUCK" loading="lazy" draggable="false">
+          <span>DUCK</span>
+        </a>
+        <a class="stage-panel" href="https://madanimals.base.shop/items/127916680" target="_blank" draggable="false">
+          <img src="https://baseec-img-mng.akamaized.net/images/item/origin/20f2bd1f604f931bb0e70d4b8fbe6e5b.png?imformat=generic&q=90&im=Resize,width=400,type=normal" alt="BEAR" loading="lazy" draggable="false">
+          <span>BEAR</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COLLECTION ===== -->
+  <section class="section collection-section" id="collection">
+    <div class="container">
+      <div class="section-head">
+        <div class="sh-line"></div>
+        <h2 class="sh-title">COLLECTION</h2>
+        <a href="https://madanimals.base.shop/items/all" target="_blank" class="sh-link">ALL ITEMS →</a>
+      </div>
+      <p class="section-sub">全アイテム — PRE OPEN SALE開催中 / ¥10,000以上で送料無料</p>
+
+      <!-- Category filter -->
+      <div class="cat-filters">
+        <button class="cat-btn active" data-filter="all">ALL</button>
+        <button class="cat-btn" data-filter="hoodie">HOODIE</button>
+        <button class="cat-btn" data-filter="sweat">SWEAT</button>
+        <button class="cat-btn" data-filter="tee">T-SHIRT</button>
+      </div>
+
+      <div class="collection-grid" id="collectionGrid">
+
+        <!-- NEW -->
+        <a href="https://madanimals.base.shop/items/138087284" target="_blank" class="item-card fade-up" data-cat="sweat">
+          <div class="item-img">
+            <img src="https://baseec-img-mng.akamaized.net/images/item/origin/08d19a73f643b1a5e88e8b3e58671a9d.png?imformat=generic&q=90&im=Resize,width=600,type=normal" alt="Heart Sweat" loading="lazy">
+            <div class="ic-badge new">NEW</div>
+            <div class="item-hover">SHOP →</div>
+          </div>
+          <div class="item-meta">
+            <span class="im-cat">SWEAT SHIRT</span>
+            <h3 class="im-name">HEART</h3>
+            <span class="im-price">¥6,500</span>
+          </div>
+        </a>
+
+        <a href="https://madanimals.base.shop/items/138083269" target="_blank" class="item-card fade-up" data-cat="hoodie">
+          <div class="item-img">
+            <img src="https://baseec-img-mng.akamaized.net/images/item/origin/d1810a6d03071981f4bf5d53f9cd0045.png?imformat=generic&q=90&im=Resize,width=600,type=normal" alt="MAD ANIMALS HOODIE" loading="lazy">
+            <div class="ic-badge new">NEW</div>
+            <div class="item-hover">SHOP →</div>
+          </div>
+          <div class="item-meta">
+            <span class="im-cat">HOODIE</span>
+            <h3 class="im-name">MAD ANIMALS</h3>
+            <span class="im-price">¥7,000</span>
+          </div>
+        </a>
+
+        <a href="https://madanimals.base.shop/items/138079671" target="_blank" class="item-card fade-up" data-cat="sweat">
+          <div class="item-img">
+            <img src="https://baseec-img-mng.akamaized.net/images/item/origin/b63eb1d5bf23d11dd46d4c14c2af45d0.png?imformat=generic&q=90&im=Resize,width=600,type=normal" alt="MAD ANIMALS Sweat" loading="lazy">
+            <div class="ic-badge new">NEW</div>
+            <div class="item-hover">SHOP →</div>
+          </div>
+          <div class="item-meta">
+            <span class="im-cat">SWEAT SHIRT</span>
+            <h3 class="im-name">MAD ANIMALS</h3>
+            <span class="im-price">¥6,000</span>
+          </div>
+        </a>
+
+        <a href="https://madanimals.base.shop/items/134100335" target="_blank" class="item-card fade-up" data-cat="sweat">
+          <div class="item-img">
+            <img src="https://baseec-img-mng.akamaized.net/images/item/origin/49cf90d17403f8706e813f16e15fe00b.png?imformat=generic&q=90&im=Resize,width=600,type=normal" alt="Sheep Sweat" loading="lazy">
+            <div class="item-hover">SHOP →</div>
+          </div>
+          <div class="item-meta">
+            <span class="im-cat">SWEAT SHIRT</span>
+            <h3 class="im-name">SHEEP</h3>
+            <span class="im-price">¥6,600</span>
+          </div>
+        </a>
+
+        <a href="https://madanimals.base.shop/items/127775143" target="_blank" class="item-card fade-up" data-cat="hoodie">
+          <div class="item-img">
+            <img src="https://baseec-img-mng.akamaized.net/images/item/origin/0c13a5c3892bf54dc705e11a5260eb79.png?imformat=generic&q=90&im=Resize,width=600,type=normal" alt="Giraffe Hoodie" loading="lazy">
+            <div class="item-hover">SHOP →</div>
+          </div>
+          <div class="item-meta">
+            <span class="im-cat">HOODIE</span>
+            <h3 class="im-name">GIRAFFE</h3>
+            <span class="im-price">¥6,600</span>
+          </div>
+        </a>
+
+        <a href="https://madanimals.base.shop/items/130235592" target="_blank" class="item-card fade-up" data-cat="sweat">
+          <div class="item-img">
+            <img src="https://baseec-img-mng.akamaized.net/images/item/origin/5840f2caa893820e67bb0910462cd7e9.png?imformat=generic&q=90&im=Resize,width=600,type=normal" alt="Chimpanzee Sweat" loading="lazy">
+            <div class="ic-badge sale">SALE</div>
+            <div class="item-hover">SHOP →</div>
+          </div>
+          <div class="item-meta">
+            <span class="im-cat">SWEAT SHIRT</span>
+            <h3 class="im-name">CHIMPANZEE</h3>
+            <span class="im-price">¥6,600</span>
+          </div>
+        </a>
+
+        <a href="https://madanimals.base.shop/items/129555319" target="_blank" class="item-card fade-up" data-cat="sweat">
+          <div class="item-img">
+            <img src="https://baseec-img-mng.akamaized.net/images/item/origin/201266d177b9f6dcc3cb1e8dff60df26.png?imformat=generic&q=90&im=Resize,width=600,type=normal" alt="Crocodile Sweat" loading="lazy">
+            <div class="item-hover">SHOP →</div>
+          </div>
+          <div class="item-meta">
+            <span class="im-cat">SWEAT SHIRT</span>
+            <h3 class="im-name">CROCODILE</h3>
+            <span class="im-price">¥6,600</span>
+          </div>
+        </a>
+
+        <a href="https://madanimals.base.shop/items/129555925" target="_blank" class="item-card fade-up" data-cat="sweat">
+          <div class="item-img">
+            <img src="https://baseec-img-mng.akamaized.net/images/item/origin/42b7a4c4900433304bbd87305bb2579b.png?imformat=generic&q=90&im=Resize,width=600,type=normal" alt="Duck Sweat" loading="lazy">
+            <div class="ic-badge hot">HOT</div>
+            <div class="item-hover">SHOP →</div>
+          </div>
+          <div class="item-meta">
+            <span class="im-cat">SWEAT SHIRT</span>
+            <h3 class="im-name">DUCK</h3>
+            <span class="im-price">¥6,600</span>
+          </div>
+        </a>
+
+        <a href="https://madanimals.base.shop/items/129968836" target="_blank" class="item-card fade-up" data-cat="tee">
+          <div class="item-img">
+            <img src="https://baseec-img-mng.akamaized.net/images/item/origin/9c6e572de1fef26d92f18689e7b8eb88.png?imformat=generic&q=90&im=Resize,width=600,type=normal" alt="Sheep T-shirt" loading="lazy">
+            <div class="item-hover">SHOP →</div>
+          </div>
+          <div class="item-meta">
+            <span class="im-cat">T-SHIRT</span>
+            <h3 class="im-name">SHEEP</h3>
+            <span class="im-price">¥3,300</span>
+          </div>
+        </a>
+
+        <a href="https://madanimals.base.shop/items/127901043" target="_blank" class="item-card fade-up" data-cat="hoodie">
+          <div class="item-img">
+            <img src="https://baseec-img-mng.akamaized.net/images/item/origin/29681f8b7014eff754659efd563106bb.png?imformat=generic&q=90&im=Resize,width=600,type=normal" alt="Wild Boar Hoodie" loading="lazy">
+            <div class="ic-badge sale">SALE</div>
+            <div class="item-hover">SHOP →</div>
+          </div>
+          <div class="item-meta">
+            <span class="im-cat">HOODIE</span>
+            <h3 class="im-name">WILD BOAR</h3>
+            <span class="im-price">¥6,600</span>
+          </div>
+        </a>
+
+        <a href="https://madanimals.base.shop/items/128030153" target="_blank" class="item-card fade-up" data-cat="hoodie">
+          <div class="item-img">
+            <img src="https://baseec-img-mng.akamaized.net/images/item/origin/b73d19c79514afc579af81653d30a16c.png?imformat=generic&q=90&im=Resize,width=600,type=normal" alt="Chimpanzee Hoodie" loading="lazy">
+            <div class="item-hover">SHOP →</div>
+          </div>
+          <div class="item-meta">
+            <span class="im-cat">HOODIE</span>
+            <h3 class="im-name">CHIMPANZEE</h3>
+            <span class="im-price">¥8,800</span>
+          </div>
+        </a>
+
+        <a href="https://madanimals.base.shop/items/128153244" target="_blank" class="item-card fade-up" data-cat="hoodie">
+          <div class="item-img">
+            <img src="https://baseec-img-mng.akamaized.net/images/item/origin/be189e77d76df345147e21e1c04aff30.png?imformat=generic&q=90&im=Resize,width=600,type=normal" alt="Penguin Hoodie" loading="lazy">
+            <div class="item-hover">SHOP →</div>
+          </div>
+          <div class="item-meta">
+            <span class="im-cat">HOODIE</span>
+            <h3 class="im-name">PENGUIN</h3>
+            <span class="im-price">¥8,800</span>
+          </div>
+        </a>
+
+        <a href="https://madanimals.base.shop/items/128833351" target="_blank" class="item-card fade-up" data-cat="hoodie">
+          <div class="item-img">
+            <img src="https://baseec-img-mng.akamaized.net/images/item/origin/68c4fe913bff5b9a0477022c9c4973ae.png?imformat=generic&q=90&im=Resize,width=600,type=normal" alt="Dog Hoodie" loading="lazy">
+            <div class="ic-badge sale">SALE</div>
+            <div class="item-hover">SHOP →</div>
+          </div>
+          <div class="item-meta">
+            <span class="im-cat">HOODIE</span>
+            <h3 class="im-name">DOG</h3>
+            <span class="im-price">¥6,600</span>
+          </div>
+        </a>
+
+        <a href="https://madanimals.base.shop/items/128832604" target="_blank" class="item-card fade-up" data-cat="hoodie">
+          <div class="item-img">
+            <img src="https://baseec-img-mng.akamaized.net/images/item/origin/7cb70094def33a083565229a13f35b00.png?imformat=generic&q=90&im=Resize,width=600,type=normal" alt="Sheep Hoodie" loading="lazy">
+            <div class="ic-badge sale">SALE</div>
+            <div class="item-hover">SHOP →</div>
+          </div>
+          <div class="item-meta">
+            <span class="im-cat">HOODIE</span>
+            <h3 class="im-name">SHEEP</h3>
+            <span class="im-price">¥6,600</span>
+          </div>
+        </a>
+
+        <a href="https://madanimals.base.shop/items/127916680" target="_blank" class="item-card fade-up" data-cat="hoodie">
+          <div class="item-img">
+            <img src="https://baseec-img-mng.akamaized.net/images/item/origin/20f2bd1f604f931bb0e70d4b8fbe6e5b.png?imformat=generic&q=90&im=Resize,width=600,type=normal" alt="Bear Hoodie" loading="lazy">
+            <div class="ic-badge sale">SALE</div>
+            <div class="item-hover">SHOP →</div>
+          </div>
+          <div class="item-meta">
+            <span class="im-cat">HOODIE</span>
+            <h3 class="im-name">BEAR</h3>
+            <span class="im-price">¥6,600</span>
+          </div>
+        </a>
+
+        <a href="https://madanimals.base.shop/items/132457416" target="_blank" class="item-card fade-up" data-cat="sweat">
+          <div class="item-img">
+            <img src="https://baseec-img-mng.akamaized.net/images/item/origin/d5fc79b2d7ce98618d22ece4019ca174.png?imformat=generic&q=90&im=Resize,width=600,type=normal" alt="Horse Sweat" loading="lazy">
+            <div class="item-hover">SHOP →</div>
+          </div>
+          <div class="item-meta">
+            <span class="im-cat">SWEAT SHIRT</span>
+            <h3 class="im-name">HORSE</h3>
+            <span class="im-price">¥6,600</span>
+          </div>
+        </a>
+
+      </div><!-- /collection-grid -->
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="about-inner">
+        <div class="about-visual">
+          <div class="av-img-wrap">
+            <img src="https://baseec-img-mng.akamaized.net/images/shop_front/madanimals-base-shop/64c7332e41d44464f2586d9cb6f6dd8e.png" alt="MAD ANIMALS" class="av-img">
+          </div>
+          <div class="av-sticker av-s1">STAY<br>WILD</div>
+          <div class="av-sticker av-s2">🔥 MAD</div>
+          <div class="av-tag">EST. 2025 — JAPAN</div>
+        </div>
+        <div class="about-text">
+          <div class="section-head left">
+            <div class="sh-line"></div>
+            <h2 class="sh-title sm">ABOUT</h2>
+          </div>
+          <h3 class="about-headline">かわいいのに、<br>なんかクセになる。</h3>
+          <p class="about-body">
+            一見すると思わず笑顔になるような"かわいさ"をまといながら、
+            よく見るとどこか"ちょっとヤバい"表情やニュアンスを潜ませた、
+            独自の世界観を持つストリートウェアブランド。<br><br>
+            そのゆるい可愛らしさと、じわっと感じる狂気のギャップこそが、
+            MAD ANIMALSのデザインの魅力です。
+          </p>
+          <div class="about-tags">
+            <span>#streetwear</span>
+            <span>#fashion</span>
+            <span>#animation</span>
+            <span>#japan</span>
+            <span>#madanimals</span>
+          </div>
+          <div class="about-btns">
+            <a href="https://madanimals.base.shop" target="_blank" class="btn btn-yellow">SHOP NOW</a>
+            <a href="https://www.instagram.com/madanimals0000/" target="_blank" class="btn btn-outline-white">INSTAGRAM</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SALE BANNER ===== -->
+  <a href="https://madanimals.base.shop" target="_blank" class="sale-banner" style="display:block;text-decoration:none;">
+    <div class="sb-marquee">
+      <div class="sb-track">
+        <span>PRE OPEN SALE</span><span>✦</span>
+        <span>¥10,000以上で送料無料</span><span>✦</span>
+        <span>madanimals.base.shop</span><span>✦</span>
+        <span>PRE OPEN SALE</span><span>✦</span>
+        <span>¥10,000以上で送料無料</span><span>✦</span>
+        <span>madanimals.base.shop</span><span>✦</span>
+      </div>
+    </div>
+  </a>
+
+  <!-- ===== WATERMARK ===== -->
+  <div class="wm" aria-hidden="true">
+    <div class="wm-track" id="wmTrack">STAY WILD — MAD ANIMALS — STAY WILD — MAD ANIMALS — STAY WILD —</div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="ft-brand">
+          <p class="ft-name">MAD<br>ANIMALS</p>
+          <p class="ft-wild">STAY WILD.</p>
+          <a href="https://www.instagram.com/madanimals0000/" target="_blank" class="ft-ig">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            @madanimals0000
+          </a>
+        </div>
+        <div class="ft-nav">
+          <a href="https://madanimals.base.shop" target="_blank">SHOP</a>
+          <a href="https://madanimals.base.shop/items/all" target="_blank">ALL ITEMS</a>
+          <a href="https://madanimals.base.shop/about" target="_blank">ABOUT</a>
+          <a href="https://thebase.com/inquiry/madanimals-base-shop" target="_blank">CONTACT</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 MAD ANIMALS. Powered by BASE.</p>
+        <div class="ft-legal">
+          <a href="https://madanimals.base.shop/privacy" target="_blank">プライバシーポリシー</a>
+          <a href="https://madanimals.base.shop/law" target="_blank">特定商取引法</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleNav() {
+      document.getElementById('navMobile').classList.toggle('open');
+    }
+
+    // Category filter
+    document.querySelectorAll('.cat-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('.item-card').forEach(card => {
+          if (filter === 'all' || card.dataset.cat === filter) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Fade-in on scroll (3D flip-in + stagger)
+    const io = new IntersectionObserver(entries => {
+      entries.forEach((e, i) => {
+        if (!e.isIntersecting) return;
+        const el = e.target;
+        const delay = Math.min(i * 60, 360);
+        el.style.transitionDelay = delay + 'ms';
+        el.classList.add('visible');
+        io.unobserve(el);
+        // 登場後はfade-upを外し、ホバー時の3Dチルトが遅延なく効くようにする
+        setTimeout(() => {
+          el.classList.remove('fade-up', 'visible');
+          el.style.transitionDelay = '';
+        }, 700 + delay);
+      });
+    }, { threshold: 0.06 });
+    document.querySelectorAll('.item-card, .about-inner').forEach(el => io.observe(el));
+
+    /* ===== FX: AI atmosphere / 3D text / click effects ===== */
+    (function () {
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const fine   = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+      // (a) cursor-following glow + (2a) hero title 3D tilt — PC only
+      if (fine && !reduce) {
+        const glow  = document.querySelector('.cursor-glow');
+        const title = document.querySelector('.hero-title');
+        const heroBody = document.querySelector('.hero-body');
+        let mx = window.innerWidth / 2, my = window.innerHeight / 2, raf = 0;
+
+        window.addEventListener('mousemove', e => {
+          mx = e.clientX; my = e.clientY;
+          if (glow) glow.classList.add('on');
+          if (!raf) raf = requestAnimationFrame(apply);
+        });
+
+        function apply() {
+          raf = 0;
+          if (glow) {
+            glow.style.setProperty('--mx', mx + 'px');
+            glow.style.setProperty('--my', my + 'px');
+          }
+          if (title && heroBody) {
+            const r = heroBody.getBoundingClientRect();
+            const nx = (mx - r.left) / r.width  - 0.5;   // -0.5..0.5
+            const ny = (my - r.top)  / r.height - 0.5;
+            const rotY = Math.max(-11, Math.min(11,  nx * 22));
+            const rotX = Math.max(-11, Math.min(11, -ny * 22));
+            title.style.transform = 'rotateX(' + rotX + 'deg) rotateY(' + rotY + 'deg)';
+          }
+        }
+      }
+
+      // (c) scroll progress bar
+      const bar = document.querySelector('.scroll-progress');
+      if (bar) {
+        let sraf = 0;
+        const onScroll = () => {
+          if (sraf) return;
+          sraf = requestAnimationFrame(() => {
+            sraf = 0;
+            const h = document.documentElement;
+            const top = window.scrollY || window.pageYOffset || h.scrollTop || 0;
+            const max = h.scrollHeight - h.clientHeight;
+            const p = max > 0 ? Math.min(1, top / max) : 0;
+            bar.style.transform = 'scaleX(' + p + ')';
+          });
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+      }
+
+      // (d) section-title glitch on reveal
+      if (!reduce) {
+        const gio = new IntersectionObserver(entries => {
+          entries.forEach(e => {
+            if (e.isIntersecting) {
+              e.target.classList.add('glitch-in');
+              gio.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.6 });
+        document.querySelectorAll('.sh-title').forEach(el => gio.observe(el));
+      }
+
+      // (3) click ripple + light sparks
+      if (!reduce) {
+        // 生成した要素は animationend で消すが、環境によっては発火前に
+        // アニメが終わる/間引かれるので setTimeout フォールバックで必ず除去
+        const autoRemove = (el, life) => {
+          let done = false;
+          const kill = () => { if (!done) { done = true; el.remove(); } };
+          el.addEventListener('animationend', kill);
+          setTimeout(kill, life);
+        };
+
+        document.addEventListener('pointerdown', e => {
+          const x = e.clientX, y = e.clientY;
+
+          const ripple = document.createElement('div');
+          ripple.className = 'click-ripple';
+          ripple.style.left = x + 'px';
+          ripple.style.top  = y + 'px';
+          document.body.appendChild(ripple);
+          autoRemove(ripple, 700);
+
+          // 二重リング（オレンジ・少し遅れて拡がる）
+          const ring2 = document.createElement('div');
+          ring2.className = 'click-ripple r2';
+          ring2.style.left = x + 'px';
+          ring2.style.top  = y + 'px';
+          document.body.appendChild(ring2);
+          autoRemove(ring2, 850);
+
+          const n = 8;
+          for (let i = 0; i < n; i++) {
+            const s = document.createElement('div');
+            s.className = 'spark' + (i % 2 ? ' orange' : '');
+            const ang = (Math.PI * 2 * i) / n + Math.random() * 0.5;
+            const dist = 34 + Math.random() * 40;
+            s.style.left = x + 'px';
+            s.style.top  = y + 'px';
+            s.style.setProperty('--dx', Math.cos(ang) * dist + 'px');
+            s.style.setProperty('--dy', Math.sin(ang) * dist + 'px');
+            document.body.appendChild(s);
+            autoRemove(s, 750);
+          }
+        }, { passive: true });
+      }
+    })();
+
+    /* ===== FX v2: neural particles / text decode / 3D cards / parallax ===== */
+    (function () {
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const fine   = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+      // (e) ニューラルネット粒子（HERO）— 点が線で繋がり、カーソルに反応
+      const canvas = document.querySelector('.fx-net');
+      if (canvas && !reduce) {
+        const ctx = canvas.getContext('2d');
+        const hero = canvas.parentElement;
+        const N = fine ? 64 : 30;
+        const LINK = 130;
+        let w = 0, h = 0, pts = [], raf = 0, active = false;
+        let mx = -9999, my = -9999;
+
+        function resize() {
+          const dpr = Math.min(window.devicePixelRatio || 1, 2);
+          const pw = w, ph = h;
+          w = hero.clientWidth; h = hero.clientHeight;
+          // レイアウト未確定（幅0）なら次フレームで再試行。
+          // これを怠ると点がx=0付近に固まり、左端に縦一列で出てしまう
+          if (!w || !h) { requestAnimationFrame(resize); return; }
+          canvas.width = w * dpr; canvas.height = h * dpr;
+          ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+          if (!pts.length) {
+            for (let i = 0; i < N; i++) pts.push({
+              x: Math.random() * w, y: Math.random() * h,
+              vx: (Math.random() - 0.5) * 0.4, vy: (Math.random() - 0.5) * 0.4,
+              r: 1 + Math.random() * 1.5
+            });
+          } else if (pw > 0 && ph > 0) {
+            // リサイズ時は既存の点を新サイズへ比例配置（画面外に固まらせない）
+            const sx = w / pw, sy = h / ph;
+            for (const p of pts) { p.x *= sx; p.y *= sy; }
+          }
+        }
+
+        if (fine) hero.addEventListener('mousemove', e => {
+          const r = canvas.getBoundingClientRect();
+          mx = e.clientX - r.left; my = e.clientY - r.top;
+        });
+        if (fine) hero.addEventListener('mouseleave', () => { mx = -9999; my = -9999; });
+
+        function step() {
+          raf = 0;
+          ctx.clearRect(0, 0, w, h);
+          for (const p of pts) {
+            p.x += p.vx; p.y += p.vy;
+            if (p.x < 0 || p.x > w) p.vx *= -1;
+            if (p.y < 0 || p.y > h) p.vy *= -1;
+          }
+          for (let i = 0; i < pts.length; i++) {
+            const a = pts[i];
+            for (let j = i + 1; j < pts.length; j++) {
+              const b = pts[j];
+              const dx = a.x - b.x, dy = a.y - b.y;
+              const d = Math.hypot(dx, dy);
+              if (d < LINK) {
+                ctx.strokeStyle = 'rgba(255,214,0,' + (0.16 * (1 - d / LINK)).toFixed(3) + ')';
+                ctx.lineWidth = 1;
+                ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+              }
+            }
+            const md = Math.hypot(a.x - mx, a.y - my);
+            if (md < 180) {
+              ctx.strokeStyle = 'rgba(255,69,0,' + (0.35 * (1 - md / 180)).toFixed(3) + ')';
+              ctx.lineWidth = 1;
+              ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(mx, my); ctx.stroke();
+            }
+            ctx.fillStyle = 'rgba(255,214,0,0.5)';
+            ctx.beginPath(); ctx.arc(a.x, a.y, a.r, 0, Math.PI * 2); ctx.fill();
+          }
+          if (active) raf = requestAnimationFrame(step);
+        }
+
+        resize();
+        window.addEventListener('resize', resize);
+        new IntersectionObserver(es => {
+          active = es[0].isIntersecting;
+          if (active && !raf) raf = requestAnimationFrame(step);
+        }).observe(hero);
+      }
+
+      // (f) テキストデコード演出（カタカナ/記号 → 本来の文字に解読）
+      const CHARS = 'アイウエオカキクケコ01<>#/*+ANIMLSWD';
+      function decode(el) {
+        if (reduce || el.dataset.decoded) return;
+        el.dataset.decoded = '1';
+        const final = el.textContent;
+        let f = 0; const total = Math.max(16, final.length * 2);
+        // rAFが止まっても（タブ非表示など）文字化けのまま残らない保険
+        const safety = setTimeout(() => { el.textContent = final; }, 2500);
+        (function tick() {
+          f++;
+          const done = Math.floor(final.length * (f / total));
+          let out = '';
+          for (let i = 0; i < final.length; i++) {
+            const c = final[i];
+            out += (i < done || c === ' ') ? c : CHARS[(Math.random() * CHARS.length) | 0];
+          }
+          el.textContent = out;
+          if (f < total) requestAnimationFrame(tick);
+          else { clearTimeout(safety); el.textContent = final; }
+        })();
+      }
+      const heroTag = document.querySelector('.hero-tag');
+      if (heroTag) setTimeout(() => decode(heroTag), 400);
+      const dio = new IntersectionObserver(es => es.forEach(e => {
+        if (e.isIntersecting) { decode(e.target); dio.unobserve(e.target); }
+      }), { threshold: 0.6 });
+      document.querySelectorAll('.sh-title, .ft-wild').forEach(el => dio.observe(el));
+
+      // (g) 商品カード＆ABOUT画像の3Dチルト＋グレア — PCのみ
+      if (fine && !reduce) {
+        document.querySelectorAll('.item-card, .av-img-wrap').forEach(card => {
+          let traf = 0, rx = 0, ry = 0, gx = 50, gy = 50;
+          card.addEventListener('pointermove', e => {
+            const r = card.getBoundingClientRect();
+            const px = (e.clientX - r.left) / r.width;
+            const py = (e.clientY - r.top) / r.height;
+            ry = (px - 0.5) * 10; rx = (0.5 - py) * 10;
+            gx = px * 100; gy = py * 100;
+            if (!traf) traf = requestAnimationFrame(() => {
+              traf = 0;
+              card.style.transform =
+                'perspective(700px) rotateX(' + rx + 'deg) rotateY(' + ry + 'deg) translateY(-6px)';
+              card.style.setProperty('--gx', gx + '%');
+              card.style.setProperty('--gy', gy + '%');
+            });
+          });
+          card.addEventListener('pointerleave', () => {
+            if (traf) { cancelAnimationFrame(traf); traf = 0; }
+            card.style.transform = '';
+          });
+        });
+      }
+
+      // (h) スクロールパララックス — HERO背景はゆっくり、本文は少し流れて薄くなる
+      if (!reduce) {
+        const bg = document.querySelector('.hero-bgimg');
+        const body = document.querySelector('.hero-body');
+        let praf = 0;
+        const onScroll = () => {
+          if (praf) return;
+          praf = requestAnimationFrame(() => {
+            praf = 0;
+            const y = window.scrollY;
+            const vh = window.innerHeight;
+            if (y < vh * 1.2) {
+              if (bg) bg.style.transform = 'translateY(' + y * 0.3 + 'px) scale(1.05)';
+              if (body) {
+                body.style.transform = 'translateY(' + y * 0.14 + 'px)';
+                body.style.opacity = Math.max(0, 1 - y / (vh * 0.85));
+              }
+            }
+          });
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+      }
+    })();
+
+    /* ===== FX v3: loader / cursor / magnetic / zoom focus / 3D stage / watermark ===== */
+    (function () {
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const fine   = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+      // (i) ローディングイントロ
+      const loader = document.getElementById('loader');
+      if (loader) {
+        document.documentElement.classList.add('is-loading');
+        const pctEl = loader.querySelector('.loader-pct');
+        const barEl = loader.querySelector('.loader-bar span');
+        const DUR = reduce ? 0 : 950;
+        const t0 = performance.now();
+        let finished = false;
+        const finish = () => {
+          if (finished) return;
+          finished = true;
+          if (pctEl) pctEl.textContent = '100%';
+          if (barEl) barEl.style.transform = 'scaleX(1)';
+          loader.classList.add('done');
+          document.documentElement.classList.remove('is-loading');
+          setTimeout(() => loader.remove(), 900);
+        };
+        (function tick() {
+          const p = DUR ? Math.min(1, (performance.now() - t0) / DUR) : 1;
+          if (pctEl) pctEl.textContent = Math.floor(p * 100) + '%';
+          if (barEl) barEl.style.transform = 'scaleX(' + p + ')';
+          if (p < 1) requestAnimationFrame(tick); else finish();
+        })();
+        setTimeout(finish, 2200); // rAFが止まる環境でもページを塞がない保険
+      }
+
+      // (j) カスタムカーソル（黄ドット＋遅れて追うリング）— PCのみ
+      if (fine && !reduce) {
+        const dot  = document.querySelector('.cursor-dot');
+        const ring = document.querySelector('.cursor-ring');
+        if (dot && ring) {
+          document.documentElement.classList.add('fx-cursor');
+          let x = innerWidth / 2, y = innerHeight / 2, rx = x, ry = y, seen = false;
+          window.addEventListener('mousemove', e => {
+            x = e.clientX; y = e.clientY;
+            if (!seen) { seen = true; rx = x; ry = y; dot.classList.add('on'); ring.classList.add('on'); }
+            dot.style.transform = 'translate(' + x + 'px,' + y + 'px)';
+          });
+          (function loop() {
+            rx += (x - rx) * 0.16; ry += (y - ry) * 0.16;
+            ring.style.transform = 'translate(' + rx + 'px,' + ry + 'px)';
+            requestAnimationFrame(loop);
+          })();
+          document.addEventListener('mouseover', e => {
+            ring.classList.toggle('hot', !!e.target.closest('a, button, .stage'));
+          });
+          document.addEventListener('pointerdown', () => ring.classList.add('press'));
+          document.addEventListener('pointerup',   () => ring.classList.remove('press'));
+        }
+      }
+
+      // (k) マグネットボタン — カーソルに吸い付く（translateプロパティで既存transformと非干渉）
+      if (fine && !reduce) {
+        document.querySelectorAll('.btn, .nav-cta, .cat-btn').forEach(el => {
+          el.addEventListener('mousemove', e => {
+            const r = el.getBoundingClientRect();
+            const dx = e.clientX - (r.left + r.width / 2);
+            const dy = e.clientY - (r.top + r.height / 2);
+            el.style.translate = (dx * 0.22) + 'px ' + (dy * 0.34) + 'px';
+          });
+          el.addEventListener('mouseleave', () => { el.style.translate = ''; });
+        });
+      }
+
+      // (l) STAY WILD を1文字ずつ分割 → ホバーで個別に飛び出す
+      if (!reduce) {
+        document.querySelectorAll('.ht-stay, .ht-wild').forEach(line => {
+          const frag = document.createDocumentFragment();
+          [...line.childNodes].forEach(node => {
+            if (node.nodeType === Node.TEXT_NODE) {
+              node.textContent.split('').forEach(ch => {
+                const sp = document.createElement('span');
+                sp.className = 'ht-ch';
+                sp.textContent = ch;
+                frag.appendChild(sp);
+              });
+            } else {
+              frag.appendChild(node); // .ht-dot はそのまま保持
+            }
+          });
+          line.textContent = '';
+          line.appendChild(frag);
+        });
+      }
+
+      // (m) HERO浮遊グリフ
+      const gl = document.querySelector('.hero-glyphs');
+      if (gl && !reduce) {
+        const chars = 'アニマル01✦<>#*+MADWILD';
+        for (let i = 0; i < 22; i++) {
+          const s = document.createElement('span');
+          s.textContent = chars[i % chars.length];
+          s.style.left = (Math.random() * 100) + '%';
+          s.style.top  = (Math.random() * 100) + '%';
+          s.style.fontSize = (10 + Math.random() * 9) + 'px';
+          s.style.animationDuration = (7 + Math.random() * 9) + 's';
+          s.style.animationDelay = (-Math.random() * 10) + 's';
+          gl.appendChild(s);
+        }
+      }
+
+      // (n) 3Dショーケース — 自動回転＋慣性ドラッグ
+      const ringEl = document.getElementById('stageRing');
+      const stage  = document.getElementById('stage3d');
+      if (ringEl && stage) {
+        const BASE = reduce ? 0 : 0.08;
+        let rot = 0, vel = BASE, dragging = false, lastX = 0, moved = 0, active = false;
+        stage.addEventListener('pointerdown', e => {
+          dragging = true; moved = 0; lastX = e.clientX; vel = 0;
+          try { stage.setPointerCapture(e.pointerId); } catch (_) {}
+        });
+        stage.addEventListener('pointermove', e => {
+          if (!dragging) return;
+          const dx = e.clientX - lastX; lastX = e.clientX;
+          moved += Math.abs(dx);
+          rot += dx * 0.35; vel = dx * 0.35;
+        });
+        const end = () => { dragging = false; };
+        stage.addEventListener('pointerup', end);
+        stage.addEventListener('pointercancel', end);
+        // ドラッグ直後の誤クリックでショップへ飛ばない
+        stage.addEventListener('click', e => {
+          if (moved > 8) { e.preventDefault(); e.stopPropagation(); }
+        }, true);
+        new IntersectionObserver(es => { active = es[0].isIntersecting; }).observe(stage);
+        (function loop() {
+          if (active) {
+            if (!dragging) { vel += (BASE - vel) * 0.03; rot += vel; }
+            ringEl.style.transform = 'rotateY(' + rot + 'deg)';
+          }
+          requestAnimationFrame(loop);
+        })();
+      }
+
+      // (o) スクロール統合FX: ズームフォーカス＋ウォーターマーク
+      const zoomSec  = document.querySelector('.zoom-section');
+      const zoomImg  = document.querySelector('.zoom-img-wrap');
+      const zoomWord = document.querySelector('.zoom-word');
+      const zoomCap  = document.querySelector('.zoom-caption');
+      const wmTrack  = document.getElementById('wmTrack');
+      if (!reduce && (zoomSec || wmTrack)) {
+        let zraf = 0;
+        const apply = () => {
+          zraf = 0;
+          const vh = innerHeight;
+          if (zoomSec && zoomImg) {
+            const r = zoomSec.getBoundingClientRect();
+            const total = Math.max(1, r.height - vh);
+            const p = Math.min(1, Math.max(0, -r.top / total));
+            const scale = 0.55 + p * 0.65;                       // 0.55 → 1.2
+            const blur  = Math.max(0, 1 - p * 1.7) * 14;         // 14px → 0（6割手前でピントが合う）
+            zoomImg.style.transform = 'scale(' + scale.toFixed(4) + ')';
+            zoomImg.style.filter = 'blur(' + blur.toFixed(2) + 'px) saturate(' + (0.35 + p * 0.75).toFixed(3) + ')';
+            if (zoomWord) zoomWord.style.transform = 'translateX(' + ((0.5 - p) * 22).toFixed(2) + 'vw)';
+            if (zoomCap)  zoomCap.style.opacity = Math.min(1, Math.max(0, (p - 0.55) * 3.2)).toFixed(3);
+          }
+          if (wmTrack) {
+            const r = wmTrack.getBoundingClientRect();
+            const p = Math.min(1, Math.max(0, (vh - r.top) / (vh + r.height)));
+            wmTrack.style.transform = 'translateX(' + (-4 - p * 22).toFixed(2) + '%)';
+          }
+        };
+        window.addEventListener('scroll', () => { if (!zraf) zraf = requestAnimationFrame(apply); }, { passive: true });
+        window.addEventListener('resize', () => { if (!zraf) zraf = requestAnimationFrame(apply); });
+        apply();
+      }
+    })();
+  </script>
+</body>
+</html>
